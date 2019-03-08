@@ -1,0 +1,106 @@
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>jQuery UI: Draggable Elements</title>
+  
+  <!-- load jQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  
+  <!-- load jQuery UI (has built in Dragging support - do not edit) -->
+  <script
+  src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"
+  integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30="
+  crossorigin="anonymous"></script>
+
+  <!-- load my script (where dragging is enabled) -->
+  <script src="assets/js/script.js"></script>
+
+  <!-- loading css -->
+  <link rel="stylesheet" type="text/css" href="assets/css/main.css">
+
+</head>
+<body>
+
+ 
+<!-- <p id="turnoff"> OFF </p> 
+<p id="turnon"> ON </p>  -->
+
+
+
+
+ 
+<div id="draggable" class="right">
+  <img src="assets/img/m1.png" class="drag" id="m1" />
+  <img src="assets/img/m2.png" class="drag" id="m2" />
+  <img src="assets/img/m3.png" class="drag" id="m3" />
+  <img src="assets/img/m4.png" class="drag" id="m4" />
+  <img src="assets/img/m5.png" class="drag" id="m5" />
+  <img src="assets/img/m6.png" class="drag" id="m6" />
+  <img src="assets/img/m7.png" class="drag" id="m7" />
+  <img src="assets/img/c1.png" class="drag cheek" id="c1" />
+  <img src="assets/img/c2.png" class="drag cheek" id="c2" />
+  <img src="assets/img/c3.png" class="drag cheek" id="c3" />
+  <img src="assets/img/c4.png" class="drag cheek" id="c4" />
+  <img src="assets/img/c5.png" class="drag cheek" id="c5" />
+  <img src="assets/img/c6.png" class="drag cheek" id="c6" />
+
+</div>
+
+
+<div id="draggable2" class="left">
+  <img src="assets/img/e1.png" class="drag" id="e1" />
+  <img src="assets/img/e2.png" class="drag" id="e2" />
+  <img src="assets/img/e3.png" class="drag" id="e3" />
+  <img src="assets/img/e4.png" class="drag" id="e4" />
+  <img src="assets/img/e5.png" class="drag" id="e5" />
+  <img src="assets/img/e6.png" class="drag" id="e6" />
+  <img src="assets/img/e7.png" class="drag" id="e7" />
+  <img src="assets/img/e8.png" class="drag" id="e8" />
+  <img src="assets/img/e9.png" class="drag" id="e9" />
+  <img src="assets/img/e10.png" class="drag" id="e10" />
+  <img src="assets/img/e11.png" class="drag" id="e11" />
+
+  <img src="assets/img/n1.png" class="drag" id="n1" />
+  <img src="assets/img/n2.png" class="drag" id="n2" />
+  <img src="assets/img/n3.png" class="drag" id="n3" />
+  <img src="assets/img/n5.png" class="drag" id="n5" />
+  <img src="assets/img/n6.png" class="drag" id="n6" />
+  <img src="assets/img/n7.png" class="drag" id="n7" />
+
+
+</div>
+
+<div id="screenshot">
+    <p id="sc"> When you are happy with your new identity, don't forget to take a screenshot and keep it for your secret facial recognition. [Command+Shift+4] </p>
+    <p id="turnoff"> OFF </p> 
+    <p id="turnon"> ON </p> 
+</div>
+
+
+
+ 
+ <div id="container">
+    <video autoplay="true" id="videoElement">
+     
+    </video>
+</div>
+<!--- Get webcam -->
+<script>
+ var video = document.querySelector("#videoElement");
+ 
+if (navigator.mediaDevices.getUserMedia) {       
+    navigator.mediaDevices.getUserMedia({video: true})
+  .then(function(stream) {
+    video.srcObject = stream;
+  })
+  .catch(function(err0r) {
+    console.log("Something went wrong!");
+  });
+}
+</script>
+
+
+
+</body>
+</html>
